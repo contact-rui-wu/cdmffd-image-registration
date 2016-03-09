@@ -1,0 +1,47 @@
+Description
+Image registration 2D 
+Usage: 
+We provide three examples for 2D image registration. The Lena example is implemented in main2DLena.m and main2DLenaSynthetic.m; while the C-shape example is given in main2DCShape.m, note that C-shape example will, however, take a longer time to finish registration. The default number of multiresolution level and maximum number of iteration is set as 3 and 1000.  The regularize parameter (gamma) is set as 1.54, such that diffeomorphic transformation can be obtained and the stopping tolerance (TOL) is set as 0.05. Users are free to change these values.
+
+1. PlotAll
+
+Plotting image slices throughout the registration process. (yes=1 and No=0)
+The default PlotAll is set as 1. 
+
+2. SaveVideo  
+
+Save the plotted frame as a video. (yes=1 and No=0)
+The default SaveVideo is set as 0.
+Note: Use can be only save the video if the image slices are plotted (by setting PlotAll=1 )
+
+3. UseGaussian
+
+Use a Gaussian filter to smooth the transformation field. (yes=1 and No=0)
+The default is set as 0. 
+
+Other functions:
+1. MultiresolutionRegistration2D
+2. regImag2D 
+3. img2coef2D
+4. BsplineCompose2D
+5. BsplineComposeImage2D
+6. bspline1dfilt
+
+7. plotGrid
+
+8. makeGrid
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This code is accelerated by using parallel computing and Mex file.
+
+MATLAB Parallel Computing with "parfor" loop
+
+Parallel computing refers to use multiple processors for computing.  This can be carried out in the loop where the execution is independent of each other.  To do this, use "parfor" command instead of "for".  Note that nested "parfor" loop is not allowed, however, "for" loop can be used inside it.  We are using parallel computing in the following functions:
+
+img2coef2D.
+BsplineCompose2D
+BsplineComposeImage2D
+
+The code can be further accelerated by using Mex-function, which can be generated using MATLAB code. User can create relevant Mex-functions for this 2D image registration program by running the make_mex_files2D.m script. 
+
+
