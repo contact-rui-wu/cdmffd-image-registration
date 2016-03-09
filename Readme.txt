@@ -28,6 +28,6 @@ Main files for included examples:
 2D_multiresolution/main2DCShape.m - Circle to C-Shape registration
 
 3D_multiresolution/main3D.m - Sphere to Sun-shape registration
-3D_multiresolution/main3DDiceSimilarity - Registration of MRI images obtained
+3D_multiresolution/main3DDiceSimilarity.m - Registration of MRI images obtained
 from http://brainweb.bic.mni.mcgill.ca/brainweb/ (a reader for the rawb format
 is included).
