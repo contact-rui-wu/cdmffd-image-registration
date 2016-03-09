@@ -2,9 +2,9 @@ Description
 Image registration 3D 
 
 Usage: 
-In main.m contains registration examples of a sphere to a sun-like shape. The default number of multiresolution level and a maximum number of iteration is set as 3 and 1000. Users are free to change these values at line 7 and 10 in main.m. The default regularizes parameter, gamma and stopping tolerance (TOL) is set as 0.1 and 0.05 respectively. Users are free to change these values. 
+In main3D.m contains registration examples of a sphere to a sun-like shape. The default number of multiresolution level and a maximum number of iteration is set as 3 and 1000. Users are free to change these values at line 7 and 10 in main.m. The default regularizes parameter, gamma and stopping tolerance (TOL) is set as 0.1 and 0.05 respectively. Users are free to change these values. 
 
-main_DiceSimilarity.m compute dice similarity between two given image with class label 0-11. 
+main3DDiceSimilarity.m compute dice similarity between two given image with class label 0-11. 
 The user can download such image from http://brainweb.bic.mni.mcgill.ca/brainweb/.
 Download two discrete model of anatomic Brain model (raw byte file format) and save them in the 3D_multiresolution folder. Change the filenameI0 and filenameI0 in main_DiceSimilarity.m according to the downloaded files.
 e.g. 
