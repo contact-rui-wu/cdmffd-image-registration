@@ -1,4 +1,8 @@
-This is an image registration Matlab program corresponding to the paper Two and Three Dimensional Image Registration Based on B-Spline Composition and Level Sets (DOI: https://doi.org/10.4208/cicp.OA-2016-0042). If you find this code useful for your research, a citation to the above reference would be appreciated.
+This is an image registration Matlab program corresponding to the paper Two
+and Three Dimensional Image Registration Based on B-Spline Composition and
+Level Sets (DOI: https://doi.org/10.4208/cicp.OA-2016-0042). If you find this
+code useful for your research, a citation to the above reference would be 
+appreciated.
 
 It contains two main folders,
 the 2D_multiresolution, and the 3D_multiresolution. This code works any pair
