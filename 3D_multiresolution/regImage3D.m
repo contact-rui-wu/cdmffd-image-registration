@@ -53,10 +53,10 @@ if compute_DiceSimilarity && PlotAll
         I0x(:,i)=I00(:,position_slice_x,i);
     end
     
-    I0x=I0x';
-    I0x=flipud(I0x);
+    I0xx=I0x';
+    I0xx=flipud(I0xx);
     subplot(3,4,1)
-    imagesc(I0x)
+    imagesc(I0xx)
     title(['Slice of I0 at x= ', num2str(position_slice_x)])
     axis image
     colormap('gray')
@@ -266,12 +266,12 @@ for k=1:max_Iteration
             
             %slice at x position
             for i=1:nz
-                I0x(i,:)=I0(:,position_slice_x,i);
+                I0x(:,i)=I0(:,position_slice_x,i);
             end
-            I0x=I0x';
-            I0x=flipud(I0x);
+            I0xx=I0x';
+            I0xx=flipud(I0xx);
             subplot(2,2,1)
-            imagesc(I0x)
+            imagesc(I0xx)
             title({['moving image at step:', num2str(k)];['at x= ', num2str(position_slice_x)]})
             axis image
             colormap('gray')
@@ -307,10 +307,10 @@ for k=1:max_Iteration
                 I0x(:,i)=I0(:,position_slice_x,i);
             end
             
-            I0x=I0x';
-            I0x=flipud(I0x);
+            I0xx=I0x';
+            I0xx=flipud(I0xx);
             subplot(3,4,2)
-            imagesc(I0x)
+            imagesc(I0xx)
             title({['Image registration at step:', num2str(k)];['Slice of deformed I0 at x= ', num2str(position_slice_x)]})
             axis image
             colormap('gray')

@@ -1,5 +1,5 @@
 %3D-multiresolution
-function [I0] = MultiresolutionRegistration3D(I0, I1, nlevel,max_Iteration,PlotAll,SaveVideo,SaveVTK,compute_DiceSimilarity,TOL,UseGaussian,gamma)
+function [I0,Vx,Vy,Vz] = MultiresolutionRegistration3D(I0, I1, nlevel,max_Iteration,PlotAll,SaveVideo,SaveVTK,compute_DiceSimilarity,TOL,UseGaussian,gamma)
 % main_regImage3D register image Io to I1
 % Input: I0 = moving image
 %        I1 = fixed image
@@ -63,6 +63,7 @@ count=1;
 
 filename_prefix='RegistrationExample3D';
 
+tic
 for level=nlevel:-1:1
     
     disp(['Register level: ' num2str(nlevel-level+1) '...']);

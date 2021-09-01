@@ -18,7 +18,7 @@ II0_ori = I0_ori(:)';
 coef_I0 = img2coef2D(nx,ny,II0_ori);
 CI0 = coef_I0(:)';
 
-[Vx_ident, Vy_ident] = meshgrid((0.5:nx-0.5), (0.5:ny-0.5));
+[Vx_ident,Vy_ident] = meshgrid((0.5:nx-0.5), (0.5:ny-0.5));
 
 % Vx = Vx_new - Vx_ident;
 % Vy = Vy_new - Vy_ident;

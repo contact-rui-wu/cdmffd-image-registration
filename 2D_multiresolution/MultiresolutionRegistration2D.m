@@ -1,4 +1,4 @@
-function [I0,Vx,Vy] = MultiresolutionRegistration2D( I0,I1,nlevel,max_Iteration,PlotAll,SaveVideo,filename,UseGaussian,TOL,gamma)
+function [I0,Vx,Vy,output] = MultiresolutionRegistration2D( I0,I1,nlevel,max_Iteration,PlotAll,SaveVideo,filename,UseGaussian,TOL,gamma)
 %regImage_multiresolution2D register two given images from coarse to fine
 %level using level set and B-spline composition
 %Input:  I0               = moving image
@@ -97,6 +97,13 @@ for level=nlevel:-1:1
     TOL_Average=10^-((4+nlevel)-level);
     % registration
     [f,I0,count, Vx, Vy, Vx_inv, Vy_inv,FgridX, FgridY,In_gridX, In_gridY] = regImage2D(scale,TOL_Average,level,nlevel, f,count,I0_ori, I0,I1, Vxl, Vyl, Vxl_inv, Vyl_inv,M_filt,Fx, Fy,max_Iteration,PlotAll,UseGaussian,TOL,gamma);
+    
+    output(level).Vx = Vx;
+    output(level).Vy = Vy;
+    output(level).FgridX = FgridX;
+    output(level).FgridY = FgridY;
+    output(level).regIm = I0;
+    output(level).scale = scale;
     
     disp('Scaling the transformation field back to its original size...');
     % upsample
