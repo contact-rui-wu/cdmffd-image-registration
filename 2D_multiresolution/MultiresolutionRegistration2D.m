@@ -1,4 +1,4 @@
-function [I0,Vx,Vy,output] = MultiresolutionRegistration2D( I0,I1,nlevel,max_Iteration,PlotAll,SaveVideo,filename,UseGaussian,TOL,gamma)
+function [I0,Vx,Vy,Vx_inv,Vy_inv,output] = MultiresolutionRegistration2D( I0,I1,nlevel,max_Iteration,PlotAll,SaveVideo,filename,UseGaussian,TOL,gamma)
 %regImage_multiresolution2D register two given images from coarse to fine
 %level using level set and B-spline composition
 %Input:  I0               = moving image
